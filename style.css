@@ -73,7 +73,7 @@ body{
     box-sizing: border-box;
     height: 70px;
     width: 70px;
-    background-image: url(images/ricochet_red_transparent.png);
+    background-image: url(ricochet_red_transparent.png);
     background-size: cover;
     color: transparent;
     user-select: none; 
