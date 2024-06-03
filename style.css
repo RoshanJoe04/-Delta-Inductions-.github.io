@@ -73,7 +73,7 @@ body{
     box-sizing: border-box;
     height: 70px;
     width: 70px;
-    background-image: url(ricochet_red_transparent.png)!important;
+    background-image: url(ricochet_red_transparent.png);
     background-size: cover;
     color: transparent;
     user-select: none; 
@@ -83,7 +83,7 @@ body{
     box-sizing: border-box;
     height: 70px;
     width: 70px;
-    background-image: url(ricochet_blue_transparent.png)!important;
+    background-image: url(ricochet_blue_transparent.png);
     background-size: cover;
     color: transparent;
     user-select: none; 
@@ -103,7 +103,7 @@ body{
     box-sizing: border-box;
     width: 100%;
     height: 100%;
-    background-image: url(semi_ricochet_blue.png)!important;
+    background-image: url(semi_ricochet_blue.png);
     background-size: cover;
     color: transparent;
     user-select: none; 
