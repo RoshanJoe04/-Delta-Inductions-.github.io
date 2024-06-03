@@ -1,0 +1,160 @@
+body{
+    height: 100%;
+    min-width: 100vw;
+    overflow-x: auto;
+}
+#gamearea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    margin: 0px; 
+    flex-direction: column;
+}
+#gameboard{
+    width: 560px;
+    height: 560px;
+    background-color:white;
+    display: flex;
+    flex-wrap: wrap;
+}
+.square{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    height: 70px;
+    width: 70px;
+    border: 1px;
+    border-style: solid;
+    border-color: black;
+    text-align: center;
+}
+#redCannon{
+    box-sizing: border-box;
+    height: 70px;
+    width: 70px;
+    background-color: gray;
+    border: 3px solid red;
+    user-select: none; 
+    cursor: default;
+
+}
+#blueCannon{
+    box-sizing: border-box;
+    height: 70px;
+    width: 70px;
+    background-color: gray;
+    border: 3px solid blue;
+    user-select: none; 
+    cursor: default;
+
+}
+#bluetitan{
+    box-sizing: border-box;
+    height: 70px;
+    width: 70px;
+    background-color: gold;
+    border: 3px solid blue;
+    user-select: none; 
+    cursor: default;
+}
+#redtitan{
+    box-sizing: border-box;
+    height: 70px;
+    width: 70px;
+    background-color: gold;
+    border: 3px solid red;
+    user-select: none; 
+    cursor: default;
+
+}
+#redricochet{
+    box-sizing: border-box;
+    height: 70px;
+    width: 70px;
+    background-image: url(images/ricochet_red_transparent.png);
+    background-size: cover;
+    color: transparent;
+    user-select: none; 
+    cursor: default;
+}
+#bluericochet{
+    box-sizing: border-box;
+    height: 70px;
+    width: 70px;
+    background-image: url(images/ricochet_blue_transparent.png);
+    background-size: cover;
+    color: transparent;
+    user-select: none; 
+    cursor: default;
+}
+#redsemiricochet{
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    background-image: url(images/semi_ricochet_red.png);
+    background-size: cover;
+    color: transparent;
+    user-select: none; 
+    cursor: default;
+}
+#bluesemiricochet{
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    background-image: url(images/semi_ricochet_blue.png)!important;
+    background-size: cover;
+    color: transparent;
+    user-select: none; 
+    cursor: default;
+}
+.possible-move {
+    background-color: limegreen;
+}
+.bullet {
+    width: 20px;
+    height: 20px; 
+    background-color: yellow; 
+    border-radius: 50%; 
+    margin: auto;
+}
+
+#red-timer, #blue-timer {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+#play_pause
+{
+    background-image: url(images/pause-play-button.png);
+    background-size: cover;
+    height: 27px;
+    width: 27px;
+}
+#button-container
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+}
+@media screen and (max-width: 600px) {
+    body {
+        margin-top: 30px;
+        transform: scale(0.75);
+        transform-origin: top;
+    }
+    #button-container {
+        flex-direction: column;
+    }
+    #gamearea {
+        flex-direction: column;
+    }
+}
