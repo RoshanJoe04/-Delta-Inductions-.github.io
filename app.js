@@ -154,7 +154,7 @@ function bulletmovement() {
     if (direction === 'left') bulletpos -= 1;
     const nextSquare = document.querySelector(`[square-id="${bulletpos}"]`);
     const oppositePlayer = firingPlayer === 'red' ? 'blue' : 'red';
-    if (bulletpos < 0 || bulletpos >= 64 ||nextSquare.querySelector('.cannon') ||nextSquare.querySelector(`.titan.${firingPlayer}`)||bulletpos % 8 == 0 && direction == 'left'||bulletpos % 7 == 0 && direction == 'right')
+    if (bulletpos < 0 || bulletpos >= 64 ||nextSquare.querySelector('.cannon') ||nextSquare.querySelector(`.titan.${firingPlayer}`)||(bulletpos % 8 == 0 && direction == 'left')||((bulletpos-8) % 7 == 0 && direction == 'right'))
         {
             bullet.remove();
             return;
