@@ -1,160 +1,120 @@
-body{
-    height: 100%;
-    min-width: 100vw;
-    overflow-x: auto;
-}
-#gamearea {
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; 
-    margin: 0px; 
-    flex-direction: column;
 }
-#gameboard{
+
+#gamearea {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#gameboard {
     width: 560px;
     height: 560px;
-    background-color:white;
+    background-color: #fff;
     display: flex;
     flex-wrap: wrap;
+    border: 4px solid #333;
+    border-radius: 10px;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.2);
+    margin-bottom: 20px;
 }
-.square{
+
+.square {
+    width: 70px;
+    height: 70px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
     display: flex;
     justify-content: center;
     align-items: center;
-    box-sizing: border-box;
-    height: 70px;
-    width: 70px;
-    border: 1px;
-    border-style: solid;
-    border-color: black;
-    text-align: center;
+    transition: background-color 0.2s;
 }
-#redCannon{
-    box-sizing: border-box;
-    height: 70px;
-    width: 70px;
-    background-color: gray;
-    border: 3px solid red;
-    user-select: none; 
-    cursor: default;
 
+.square:hover {
+    background-color: #f0f0f0;
 }
-#blueCannon{
-    box-sizing: border-box;
-    height: 70px;
-    width: 70px;
-    background-color: gray;
-    border: 3px solid blue;
-    user-select: none; 
-    cursor: default;
 
-}
-#bluetitan{
-    box-sizing: border-box;
-    height: 70px;
-    width: 70px;
-    background-color: gold;
-    border: 3px solid blue;
-    user-select: none; 
-    cursor: default;
-}
-#redtitan{
-    box-sizing: border-box;
-    height: 70px;
-    width: 70px;
-    background-color: gold;
-    border: 3px solid red;
-    user-select: none; 
-    cursor: default;
-
-}
-#redricochet{
-    box-sizing: border-box;
-    height: 70px;
-    width: 70px;
-    background-image: url(ricochet_red_transparent.png)!important;
-    background-size: cover;
-    color: transparent;
-    user-select: none; 
-    cursor: default;
-}
-#bluericochet{
-    box-sizing: border-box;
-    height: 70px;
-    width: 70px;
-    background-image: url(ricochet_blue_transparent.png)!important;
-    background-size: cover;
-    color: transparent;
-    user-select: none; 
-    cursor: default;
-}
-#redsemiricochet{
-    box-sizing: border-box;
-    width: 100%;
-    height: 100%;
-    background-image: url(semi_ricochet_red.png)!important;
-    background-size: cover;
-    color: transparent;
-    user-select: none; 
-    cursor: default;
-}
-#bluesemiricochet{
-    box-sizing: border-box;
-    width: 100%;
-    height: 100%;
-    background-image: url(semi_ricochet_blue.png)!important;
-    background-size: cover;
-    color: transparent;
-    user-select: none; 
-    cursor: default;
-}
 .possible-move {
-    background-color: limegreen;
+    background-color: rgba(50, 205, 50, 0.7);
 }
+
+#button-container {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+#button-container button, #play_pause {
+    cursor: pointer;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    transition: background-color 0.3s;
+}
+
+#button-container button:hover, #play_pause:hover {
+    background-color: #555;
+}
+
+#red-timer, #blue-timer {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 5px 10px;
+}
+
+.piece {
+    user-select: none;
+    cursor: default;
+}
+
+#redCannon, #blueCannon, #redtitan, #bluetitan, #redricochet, #bluericochet, #redsemiricochet, #bluesemiricochet {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .bullet {
     width: 20px;
     height: 20px; 
     background-color: yellow; 
     border-radius: 50%; 
     margin: auto;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
 }
 
-#red-timer, #blue-timer {
-    font-size: 24px;
-    font-weight: bold;
-    margin: 10px;
-    flex-direction: column;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-#play_pause
-{
-    background-image: url(pause-play-button.png);
-    background-size: cover;
-    height: 27px;
-    width: 27px;
-}
-#button-container
-{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0px;
-    padding: 0px;
-}
 @media screen and (max-width: 600px) {
     body {
-        margin-top: 30px;
-        transform: scale(0.75);
-        transform-origin: top;
+        transform: scale(0.8);
+        transform-origin: top center;
+        padding-top: 30px;
+    }
+    #gameboard {
+        width: 90vw;
+        height: 90vw;
+    }
+    .square {
+        width: calc(90vw / 8);
+        height: calc(90vw / 8);
     }
     #button-container {
         flex-direction: column;
-    }
-    #gamearea {
-        flex-direction: column;
+        gap: 10px;
     }
 }
