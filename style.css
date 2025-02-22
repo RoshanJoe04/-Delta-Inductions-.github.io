@@ -76,7 +76,7 @@ body {
     justify-content: center;
     cursor: pointer;
 }
-#button-container button, #play_pause {
+#button-container button {
     cursor: pointer;
     padding: 10px 15px;
     font-size: 16px;
