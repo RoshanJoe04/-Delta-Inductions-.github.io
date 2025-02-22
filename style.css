@@ -10,25 +10,33 @@ body {
 }
 
 #gamearea {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
     background: rgba(255, 255, 255, 0.9);
     border-radius: 15px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
     padding: 20px;
+}
+
+#button-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    gap: 15px;
+    margin-right: 20px;
 }
 
 #gameboard {
-    width: 560px;
-    height: 560px;
-    background-color: #fff;
-    display: flex;
-    flex-wrap: wrap;
+    background-color: #d1e8e2;
     border: 4px solid #333;
     border-radius: 10px;
-    box-shadow: inset 0 0 10px rgba(0,0,0,0.2);
-    margin-bottom: 20px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 560px;
+    height: 560px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .square {
