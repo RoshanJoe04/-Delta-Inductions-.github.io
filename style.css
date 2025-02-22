@@ -63,7 +63,19 @@ body {
     gap: 15px;
     margin-bottom: 15px;
 }
-
+#play_pause {
+    background-color: #333;
+    color: #fff;
+    font-size: 12px;
+    height: 30px;
+    padding: 0 10px;
+    border: none;
+    border-radius: 5px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
 #button-container button, #play_pause {
     cursor: pointer;
     padding: 10px 15px;
